@@ -1,0 +1,13 @@
+class MyStack {
+private:
+    queue<int> q1, q2;
+    
+public:
+    MyStack() {
+        
+    }
+    
+    void push(int x) {
+        q2.push(x);
+        while (!q1.empty()) {
+            q2.push(q1.front());
